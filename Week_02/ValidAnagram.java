@@ -38,4 +38,31 @@ public class No242_ValidAnagram {
         return Arrays.equals(sArray,tArray);
     }
 
+
+
+
+    /**
+     * 第二种解法  如果是一个异位词  那么字母出现的次数应该是一样的
+     * @param s
+     * @param t
+     * @return
+     */
+    public  boolean isAnagram2(String s, String t) {
+        if(s.length() != t.length()){
+            return false;
+        }
+
+        int[] alpha = new int[26];
+        for(int i = 0; i< s.length(); i++) {
+            alpha[s.charAt(i) - 'a'] ++;
+            alpha[t.charAt(i) - 'a'] --;
+        }
+
+        for(int i=0;i<26;i++){
+            if(alpha[i] != 0){
+                return false;
+            }
+        }
+        return true;
+    }
 }
