@@ -16,7 +16,7 @@ import java.util.Stack;
  *
  * *
  * */
-public class No20_ValidParentheses {
+public class ValidParentheses {
 
 
     public static boolean isValid(String s) {
